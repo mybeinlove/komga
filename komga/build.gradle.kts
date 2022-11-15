@@ -111,8 +111,14 @@ dependencies {
 
   implementation("com.github.ben-manes.caffeine:caffeine:2.9.3") // 3.0.0 requires Java 11
 
+<<<<<<< HEAD
   implementation("org.xerial:sqlite-jdbc:3.39.3.0")
   jooqGenerator("org.xerial:sqlite-jdbc:3.39.3.0")
+=======
+  implementation("org.xerial:sqlite-jdbc:3.36.0.3")
+  jooqGenerator("org.xerial:sqlite-jdbc:3.36.0.3")
+  implementation("com.auth0:java-jwt:4.2.1")
+>>>>>>> 76a9f40d (support pdf reader)
 
   testImplementation("org.springframework.boot:spring-boot-starter-test") {
     exclude(module = "mockito-core")

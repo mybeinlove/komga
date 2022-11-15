@@ -51,6 +51,8 @@ class KomgaProperties {
   @Positive
   var taskConsumersMax: Int = 1
 
+  var PSPDFKit = PSPDFKitConfig()
+
   class RememberMe {
     @get:NotBlank
     var key: String? = null
@@ -99,5 +101,14 @@ class KomgaProperties {
 
       var preserveOriginal: Boolean = true
     }
+  }
+
+  class PSPDFKitConfig{
+    var protocol: String="http"
+    var host:String ="localhost"
+    var port:Int = 5000
+    var token: String = ""
+    var publicKey:String=""
+    var privateKey:String=""
   }
 }
