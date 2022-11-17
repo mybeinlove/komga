@@ -43,7 +43,7 @@ export default Vue.extend({
   },
   destroyed() {
   },
-  beforeUnmount() {
+  beforeDestroy() {
     PSPDFKit.unload('.pspdfkit-container')
   },
   mounted() {
@@ -110,7 +110,6 @@ export default Vue.extend({
       })
 
         ; (await readerInst).addEventListener('viewState.currentPageIndex.change', (pageIndex: Number) => {
-          console.log(`Current page index changed to ${pageIndex}`)
           this.$emit('update:page', pageIndex)
         })
       return readerInst
